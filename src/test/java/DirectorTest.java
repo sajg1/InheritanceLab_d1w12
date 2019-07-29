@@ -46,13 +46,19 @@ public class DirectorTest {
 
     @Test
     public void canGetBonus() {
-        assertEquals(800.00, director.payBonus(), 0.01);
+        assertEquals(1600.00, director.payBonus(), 0.01);
     }
 
     @Test
     public void cannotGiveNegativeRaise() {
         director.raiseSalary(-1000);
         assertEquals(80000, director.getSalary());
+    }
+
+    @Test
+    public void canChangeDirectorName() {
+        director.setName("Harry");
+        assertEquals("Harry", director.getName());
     }
 
 }
